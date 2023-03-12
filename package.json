@@ -1,6 +1,6 @@
 {
-  "name": "react-country-dropdown",
-  "version": "1.0.4",
+  "name": "@malvinjay/react-country-dropdown",
+  "version": "1.0.0",
   "description": "A simple dropdown menu for selecting countries",
   "author": "RocktimSaikia",
   "license": "MIT",
@@ -55,8 +55,5 @@
   },
   "files": [
     "dist"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  ]
 }
