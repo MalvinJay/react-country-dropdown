@@ -1,9 +1,9 @@
 name: Node.js Package
 
 on:
-  push:
-    branches:
-    - master
+  release:
+    types:
+      - created
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: |
-          echo "@MalvinJay:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "@malvinjay:registry=https://npm.pkg.github.com" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
       - run: npm publish
         env:
