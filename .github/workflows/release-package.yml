@@ -28,11 +28,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-          scope: "@malvinjay"
       - run: npm ci
       - run: |
-          echo ${{ secrets.GITHUB_TOKEN }}
-          echo "@malvinjay:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "@MalvinJay:registry=https://npm.pkg.github.com" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
       - run: npm publish
         env:
